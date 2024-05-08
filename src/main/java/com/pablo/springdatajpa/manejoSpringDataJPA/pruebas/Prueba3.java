@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
-@Component
+//@Component
 public class Prueba3 implements CommandLineRunner {
     @Autowired
     private EditorRepository editorRepository;
