@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+//@Component
 public class Prueba6 implements CommandLineRunner {
     @Autowired
     private AerolineaRepository aerolineaRepository;
