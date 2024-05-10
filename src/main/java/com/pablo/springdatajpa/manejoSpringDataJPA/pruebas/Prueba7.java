@@ -23,35 +23,47 @@ public class Prueba7 implements CommandLineRunner {
         alumno1.setNombre("Juan");
 
         Alumno alumno2 = new Alumno();
-        alumno1.setNombre("Ana");
+        alumno2.setNombre("Ana");
 
         Curso curso1 = new Curso();
         curso1.setNombre("SpringBoot de 0 a experto");
 
         Curso curso2 = new Curso();
-        curso1.setNombre("Aprende SpringJPA");
+        curso2.setNombre("Aprende SpringJPA");
 
         alumno1.getCursos().add(curso1);
         alumno1.getCursos().add(curso2);
         alumno2.getCursos().add(curso1);
 
-        alumnoRepository.save(alumno1);
-        alumnoRepository.save(alumno2);
+        alumno1 = alumnoRepository.save(alumno1);
+        alumno2 = alumnoRepository.save(alumno2);
 
         //Búsqueda de alumno
-        Alumno alumnoRecup = alumnoRepository.findById(1L).orElse(null);
-        if (alumnoRecup!=null){
-            System.out.println("Alumno recuperado: "+alumnoRecup.getNombre());
+        Alumno alumnoRecup = alumnoRepository.findById(alumno1.getId()).orElse(null);
+        if (alumnoRecup != null) {
+            System.out.println("Alumno recuperado: " + alumnoRecup.getNombre());
+        }
 
+        Curso cursoRecup = cursoRepository.findById(curso1.getId()).orElse(null);
+        if (cursoRecup != null) {
+            System.out.println("Curso recuperado: " + cursoRecup.getNombre());
         }
-        Curso cursoRecup = cursoRepository.findById(1l).orElse(null);
-        if (cursoRecup!=null){
-            System.out.println("Curso recuperado: "+cursoRecup.getNombre());
-        }
+
         //Eliminar estudiante por su ID
-        alumnoRepository.delete(alumnoRecup);
+        if (alumnoRecup != null) {
+            alumnoRepository.delete(alumnoRecup);
+            System.out.println("Alumno eliminado");
+        } else {
+            System.out.println("No se encontró el alumno para eliminar");
+        }
 
         //Eliminar curso por su ID
-        cursoRepository.delete(cursoRecup);
+        if (cursoRecup != null) {
+            cursoRepository.delete(cursoRecup);
+            System.out.println("Curso eliminado");
+        } else {
+            System.out.println("No se encontró el curso para eliminar");
+        }
     }
+
 }
