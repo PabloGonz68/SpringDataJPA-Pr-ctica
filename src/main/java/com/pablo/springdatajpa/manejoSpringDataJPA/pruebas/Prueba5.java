@@ -1,3 +1,9 @@
+/*
+Resumen:
+Este código presenta un ejemplo de cómo utilizar Spring Data JPA para manejar entidades Equipo y Jugador con una relación bidireccional @OneToMany - @ManyToOne, donde un equipo puede tener varios jugadores y un jugador pertenece a un solo equipo. Se crea un equipo y dos jugadores, se les asigna al equipo y se guardan en la base de datos. Luego se lee el equipo y sus jugadores, se actualiza la información de un jugador, se elimina un jugador del equipo y finalmente se elimina el equipo.
+
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.pruebas;
 
 

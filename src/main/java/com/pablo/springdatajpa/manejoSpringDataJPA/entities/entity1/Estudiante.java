@@ -1,3 +1,9 @@
+/*
+Resumen:
+Esta clase representa la entidad Estudiante en el sistema, que está mapeada a una tabla en la base de datos mediante JPA. La clase utiliza anotaciones de Lombok para generar automáticamente constructores, getters, setters y otros métodos estándar. La tabla correspondiente tendrá columnas para el ID y el nombre del estudiante, así como una columna para la clave externa (foreign key) que hace referencia al ID de la dirección del estudiante.
+
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.entities.entity1;
 
 import jakarta.persistence.*;
@@ -7,7 +13,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data//Para Getters y Setter
+@Data
 @Entity
 public class Estudiante {
     @Id

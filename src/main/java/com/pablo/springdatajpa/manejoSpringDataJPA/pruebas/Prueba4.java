@@ -1,3 +1,9 @@
+/*
+Resumen:
+Este código presenta un ejemplo de cómo usar Spring Data JPA para manejar entidades Propietario y Automovil con una relación bidireccional @OneToOne, donde un propietario tiene un solo automóvil y un automóvil pertenece a un solo propietario. Se crea un propietario y un automóvil, se establece la relación entre ellos, se guardan en la base de datos. Luego se lee el propietario, se actualiza el automóvil asociado, se elimina el propietario y se verifica su eliminación.
+
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.pruebas;
 
 import com.pablo.springdatajpa.manejoSpringDataJPA.entities.entity4.Automovil;
@@ -28,7 +34,7 @@ public class Prueba4 implements CommandLineRunner {
         automovil.setPropietario(propietario);
 
         propietarioRepository.save(propietario);
-       // automovilRepository.save(automovil);
+        // automovilRepository.save(automovil);
 
         //Leer propietario
         Long propietarioId = propietario.getId();

@@ -1,3 +1,9 @@
+/*
+Resumen:
+Este código presenta un ejemplo de cómo utilizar Spring Data JPA para manejar entidades Aerolinea y Vuelo con una relación bidireccional @OneToMany - @ManyToOne, donde una aerolínea puede tener varios vuelos y un vuelo pertenece a una sola aerolínea. Se crea una aerolínea y dos vuelos, se les asigna a la aerolínea y se guardan en la base de datos. Luego se lee la aerolínea desde el repositorio, se elimina la aerolínea y se verifican los vuelos restantes en la base de datos.
+
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.pruebas;
 
 import com.pablo.springdatajpa.manejoSpringDataJPA.entities.entity6.Aerolinea;
@@ -20,7 +26,7 @@ public class Prueba6 implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-    //Crear aerolinea con vuelos
+        //Crear aerolinea con vuelos
         Aerolinea aerolinea = new Aerolinea();
         aerolinea.setNombre("Vueling");
 
@@ -37,17 +43,17 @@ public class Prueba6 implements CommandLineRunner {
 
         aerolineaRepository.save(aerolinea);
 
-        //Leer aerolinea desd el repository
+        //Leer aerolinea desde el repository
         Aerolinea aerolineadesdeBD = aerolineaRepository.findById(aerolinea.getId()).orElse(null);
         if (aerolineadesdeBD!=null){
-            System.out.println("Nombre de la aerolinea: "+aerolineadesdeBD.getNombre());
+            System.out.println("Nombre de la aerolínea: "+aerolineadesdeBD.getNombre());
 
             //Eliminar aerolinea y sus vuelos
             aerolineaRepository.delete(aerolineadesdeBD);
 
-            //Verificar eliminacion total
+            //Verificar eliminación total
             List<Vuelo> vuelos = vueloRepository.findAll();
-            System.out.println("Numero de vuelos en la base de datos: "+vuelos.size());
+            System.out.println("Número de vuelos en la base de datos: "+vuelos.size());
 
         }
     }

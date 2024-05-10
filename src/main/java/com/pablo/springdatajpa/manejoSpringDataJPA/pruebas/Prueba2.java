@@ -1,3 +1,9 @@
+/*
+Resumen:
+Este código ilustra un ejemplo de cómo utilizar Spring Data JPA para manejar entidades Autor y Libro con una relación @OneToMany, donde un autor puede tener varios libros. Se crea un autor y se le asignan dos libros. Luego se guarda el autor, se recupera por su ID, se actualiza su nombre, se muestran todos los autores en la base de datos y finalmente se elimina el autor creado.
+
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.pruebas;
 
 import com.pablo.springdatajpa.manejoSpringDataJPA.entities.entity2.Autor;

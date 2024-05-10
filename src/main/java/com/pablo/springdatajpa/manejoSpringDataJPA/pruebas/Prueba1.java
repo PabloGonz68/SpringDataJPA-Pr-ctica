@@ -1,3 +1,8 @@
+/*
+Resumen:
+Este código muestra un ejemplo de cómo utilizar Spring Data JPA para manejar entidades Estudiante y Direccion, con una relación @OneToOne. Se crea una instancia de Direccion y Estudiante, se establece la dirección para el estudiante, se guardan en la base de datos, se actualiza el nombre del estudiante, se recuperan todos los estudiantes de la base de datos y se muestra su nombre y dirección. Finalmente, se elimina el estudiante recién creado.
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.pruebas;
 
 import com.pablo.springdatajpa.manejoSpringDataJPA.entities.entity1.Direccion;

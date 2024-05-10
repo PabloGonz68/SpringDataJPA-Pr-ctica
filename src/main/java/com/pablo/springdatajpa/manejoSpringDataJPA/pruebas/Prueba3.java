@@ -1,3 +1,9 @@
+/*
+Resumen:
+Este código muestra un ejemplo de cómo utilizar Spring Data JPA para manejar entidades Editor y Revista con una relación bidireccional @OneToMany - @ManyToOne, donde un editor puede tener varias revistas y una revista pertenece a un único editor. Se crea un editor y se le asignan dos revistas, luego se guardan en la base de datos. Se lee el editor y sus revistas, se actualiza el nombre del editor, se crea una nueva revista, se elimina una revista existente y se muestra el resultado.
+
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.pruebas;
 
 import com.pablo.springdatajpa.manejoSpringDataJPA.entities.entity3.Editor;

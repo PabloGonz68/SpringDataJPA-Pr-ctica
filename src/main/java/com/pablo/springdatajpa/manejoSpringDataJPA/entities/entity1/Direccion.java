@@ -1,3 +1,9 @@
+/*
+Resumen:
+Esta clase representa la entidad Direccion en el sistema, que está mapeada a una tabla en la base de datos mediante JPA. La clase utiliza anotaciones de Lombok para generar automáticamente constructores, getters, setters y otros métodos estándar. La tabla correspondiente tendrá columnas para el ID, calle, ciudad y código postal de una dirección.
+
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.entities.entity1;
 
 import jakarta.persistence.Entity;

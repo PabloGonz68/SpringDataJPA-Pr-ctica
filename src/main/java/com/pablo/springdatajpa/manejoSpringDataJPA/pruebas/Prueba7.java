@@ -1,3 +1,9 @@
+/*
+Resumen:
+Este código muestra un ejemplo de cómo utilizar Spring Data JPA para manejar entidades Alumno y Curso con una relación bidireccional @ManyToMany, donde un alumno puede estar inscrito en varios cursos y un curso puede tener varios alumnos. Se realizan operaciones CRUD como crear, leer, actualizar y eliminar tanto para Alumno como para Curso.
+
+*/
+
 package com.pablo.springdatajpa.manejoSpringDataJPA.pruebas;
 
 import com.pablo.springdatajpa.manejoSpringDataJPA.entities.entity7.Alumno;
